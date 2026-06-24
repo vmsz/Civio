@@ -1,13 +1,12 @@
-import { FaFilePdf } from 'react-icons/fa'
-import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
-import { Font, Document, Page, Text, Image, View } from '@react-pdf/renderer'
-import { Table, TR, TH, TD } from '@ag-media/react-pdf-table'
-import { formatToBRL } from '../../../helpers/functions/formatToBRL'
-import { pdf } from '@react-pdf/renderer'
+import { Table, TD, TH, TR } from '@ag-media/react-pdf-table'
+import { Document, Font, Image, Page, pdf, Text, View } from '@react-pdf/renderer'
 import { useState } from 'react'
+import { FaFilePdf } from 'react-icons/fa'
 import { ClipLoader } from 'react-spinners'
 import logo from '../../../assets/images/logo.png'
+import { formatToBRL } from '../../../helpers/functions/formatToBRL'
 import { useBDI } from '../../../helpers/hooks/useBDI'
+import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
 
 function ExportToPDF() {
   const { tabData, tabs, activeTab } = useSpreadsheetTabs()
@@ -94,7 +93,7 @@ const PDFContent = ({ tabData, tabs, activeTab, bdi }) => {
               color: 'white',
             }}
           >
-            SOFTWARE ORSO
+            CIVIO
           </Text>
           <Image src={logo} style={{ height: 10, borderRadius: 1 }} />
         </View>

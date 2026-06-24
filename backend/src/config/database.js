@@ -4,7 +4,7 @@ const database = {
     dialect: 'postgres',
     host: 'localhost',
     port: 5432,
-    database: 'software-orso',
+    database: 'civio',
     username: 'postgres',
     password: '1911',
     define: {

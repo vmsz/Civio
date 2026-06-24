@@ -1,8 +1,8 @@
-import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
-import { IoIosSave } from 'react-icons/io'
 import { useState } from 'react'
+import { IoIosSave } from 'react-icons/io'
 import { ClipLoader } from 'react-spinners'
 import { useBDI } from '../../../helpers/hooks/useBDI'
+import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
 
 function LoadData() {
   const { setTabs, setTabData, setActiveTab, setTabScrollIndex } = useSpreadsheetTabs()
@@ -53,7 +53,7 @@ function LoadData() {
         type='file'
         id='savedDataFileInput'
         className='hidden'
-        accept='.sod'
+        accept='.civio'
         onChange={async event => {
           setLoading(true)
           const file = event.target.files[0]

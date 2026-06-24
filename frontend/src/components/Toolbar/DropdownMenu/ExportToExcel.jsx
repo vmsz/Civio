@@ -1,10 +1,10 @@
-import { PiMicrosoftExcelLogoFill } from 'react-icons/pi'
-import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
 import { generateExcel } from 'mr-excel'
-import { formatToBRL } from '../../../helpers/functions/formatToBRL'
 import { useState } from 'react'
+import { PiMicrosoftExcelLogoFill } from 'react-icons/pi'
 import { ClipLoader } from 'react-spinners'
+import { formatToBRL } from '../../../helpers/functions/formatToBRL'
 import { useBDI } from '../../../helpers/hooks/useBDI'
+import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
 
 function ExportToExcel() {
   const { tabData, tabs, activeTab } = useSpreadsheetTabs()
@@ -36,7 +36,7 @@ export { ExportToExcel }
 const generateExcelTable = async (tabData, tabs, activeTab, bdi) => {
   let formattedToMrExcel = []
 
-  formattedToMrExcel.push({ description: 'SOFTWARE ORSO', h: 30, isTitle: true })
+  formattedToMrExcel.push({ description: 'CIVIO', h: 30, isTitle: true })
 
   const isItemized = tabData[activeTab]?.[0]?.code?.K == ''
 
@@ -88,7 +88,7 @@ const generateExcelTable = async (tabData, tabs, activeTab, bdi) => {
 
   const excelData = {
     fileName: tabs[activeTab],
-    creator: 'Software Orso',
+    creator: 'Civio',
     created: Date.now(),
     modified: Date.now(),
     styles: {

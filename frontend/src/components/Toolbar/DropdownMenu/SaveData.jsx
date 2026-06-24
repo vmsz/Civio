@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
 import { FaFileDownload } from 'react-icons/fa'
 import { ClipLoader } from 'react-spinners'
 import { useBDI } from '../../../helpers/hooks/useBDI'
+import { useSpreadsheetTabs } from '../../../helpers/hooks/useSpreadsheetTabs'
 
 function SaveData() {
   const { tabs, tabData, tabScrollIndex, activeTab } = useSpreadsheetTabs()
@@ -90,7 +90,7 @@ function SaveData() {
 
         const link = document.createElement('a')
         link.href = url
-        link.download = `Software Orso ${day}.${month}.${year} ${hour}h${minutes}m.sod`
+        link.download = `Civio ${day}.${month}.${year} ${hour}h${minutes}m.civio`
         link.click()
 
         url && URL.revokeObjectURL(url)
@@ -109,3 +109,4 @@ function SaveData() {
 }
 
 export { SaveData }
+
